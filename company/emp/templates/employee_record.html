@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+    <body>
+        <table border=1>
+            <tr>
+                <td colspan=6 align="center">
+                    <h2>Employees Information</h2>
+                </td>
+            </tr>
+                {% if record is not empty %}
+                <tr>
+                    <td align="center" >ID</td>
+                    <td align="center">Name</td>
+                    <td align="center">Extension</td>
+                    <td align="center">Email</td>
+                    <td align="center">Title</td>
+                    <td align="center">Salary</td>
+                </tr>
+                <tr>
+                    <td>{{ record.ID }}</td>
+                    <td>{{ record.Name }}</td>
+                    <td>{{ record.Extension }}</td>
+                    <td>{{ record.Email }}</td>
+                    <td align="center">{{ record.Title }}</td>
+                    <td align="center">{{ record.Salary }}</td>
+                {% else %}
+                    <td colspan="6" align="center">NO RECORD FOUND!</td>
+                {% endif %}
+            </tr>
+        </table>
+        <BR>
+        <pr><a href="/greeting/">BACK</a></pr>
+    </body>
+</html>

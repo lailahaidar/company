@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+    <body>
+        <table border=1>
+            <tr>
+                <td colspan=6 align="center">
+                    <h2>Employees Information</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" >ID</td>
+                <td align="center">Name</td>
+                <td align="center">Extension</td>
+                <td align="center">Email</td>
+                <td align="center">Title</td>
+                <td align="center">Salary</td>
+            </tr>
+        {% for x in emp %}
+            <tr>
+                <td>{{ x.ID }}</td>
+                <td>{{ x.Name }}</td>
+                <td>{{ x.Extension }}</td>
+                <td>{{ x.Email }}</td>
+                <td align="center">{{ x.Title }}</td>
+                <td align="center">{{ x.Salary }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <BR>
+        <pr><a href="/greeting/">BACK</a></pr>
+    </body>
+</html>
